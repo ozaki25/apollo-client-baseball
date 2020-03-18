@@ -15,3 +15,20 @@ export const GET_TEAMS = gql`
     }
   }
 `;
+
+export const ADD_TEAM = gql`
+  mutation AddTeam(
+    $name: String!
+    $foundingDate: String
+    $homeStadium: String
+  ) {
+    addTeam(
+      name: $name
+      foundingDate: $foundingDate
+      homeStadium: $homeStadium
+    ) {
+      id
+      name
+    }
+  }
+`;
