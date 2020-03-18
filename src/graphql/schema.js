@@ -8,6 +8,7 @@ export const GET_TEAMS = gql`
       foundingDate
       homeStadium
       players {
+        id
         no
         name
         position

@@ -12,7 +12,7 @@ function Teams() {
   return (
     <div>
       {data.teams.map(team => (
-        <dl>
+        <dl key={team.id}>
           <dt>ID</dt>
           <dd>{team.id}</dd>
           <dt>チーム名</dt>
@@ -24,7 +24,7 @@ function Teams() {
           <dt>所属選手</dt>
           <dd>
             {team.players.map(player => (
-              <dl>
+              <dl key={player.id}>
                 <dt>背番号</dt>
                 <dd>{player.no}</dd>
                 <dt>名前</dt>
