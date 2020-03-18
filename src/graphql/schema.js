@@ -33,3 +33,19 @@ export const ADD_TEAM = gql`
     }
   }
 `;
+
+export const ADD_PLAYER = gql`
+  mutation AddPlayer(
+    $name: String!
+    $no: String!
+    $position: String!
+    $teamId: String!
+  ) {
+    addPlayer(name: $name, no: $no, position: $position, teamId: $teamId) {
+      id
+      no
+      name
+      position
+    }
+  }
+`;
