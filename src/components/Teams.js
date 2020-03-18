@@ -1,6 +1,6 @@
 import React from 'react';
 import { useQuery } from '@apollo/client';
-import { GET_TEAMS } from '../graphql/query';
+import { GET_TEAMS } from '../graphql/schema';
 
 function Teams() {
   const { loading, error, data } = useQuery(GET_TEAMS);
