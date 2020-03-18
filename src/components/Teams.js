@@ -3,7 +3,7 @@ import { useQuery } from '@apollo/client';
 import { GET_TEAMS } from '../graphql/schema';
 
 function Teams() {
-  const { loading, error, data } = useQuery(GET_TEAMS);
+  const { loading, error, data, refetch } = useQuery(GET_TEAMS);
   console.log({ loading, error, data });
 
   if (loading) return 'Loading...';
@@ -11,6 +11,7 @@ function Teams() {
 
   return (
     <div>
+      <button onClick={() => refetch()}>更新</button>
       {data.teams.map(team => (
         <dl key={team.id}>
           <dt>ID</dt>
